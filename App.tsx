@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NativeWindStyleSheet } from 'nativewind';
 
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
 export default function App() {
+  NativeWindStyleSheet.setOutput({
+    default: 'native'
+  })
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
