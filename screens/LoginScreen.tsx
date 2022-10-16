@@ -1,11 +1,10 @@
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 import misfitsLogo from '../assets/images/misfitsLogo.png';
+import Constants from 'expo-constants';
 
-
-export default function Login({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function Login({ navigation }: any) {
 
   const handlePress = (event) => {
-    console.log(event)
     navigation.navigate('Root');
   }
 
